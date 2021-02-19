@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:otp/signin_phone_number_verification.dart';
 
 class SigninPhoneNumberChooseVerificationPage extends StatefulWidget {
-  final String phoneNumber='01831679008';
+  final String phoneNumber;
 
-  // const SigninPhoneNumberChooseVerificationPage({Key key, this.phoneNumber = ''}) : super(key: key);
+  const SigninPhoneNumberChooseVerificationPage({Key key, this.phoneNumber = ''}) : super(key: key);
 
   @override
   _SigninPhoneNumberChooseVerificationPageState createState() => _SigninPhoneNumberChooseVerificationPageState();

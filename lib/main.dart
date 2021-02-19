@@ -26,6 +26,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+ final _phoneController  =TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           children: [
             TextField(
-              controller: TextEditingController(),
+             keyboardType: TextInputType.number,
+              controller: _phoneController,
               decoration: InputDecoration(
 
                   hintText: 'Enter your Phone number '
@@ -51,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     context,
                     MaterialPageRoute(
                         builder: (context) =>
-                            SigninPhoneNumberChooseVerificationPage()));
+                            SigninPhoneNumberChooseVerificationPage(phoneNumber: _phoneController.text)));
               },
               child: Text('OTP'),
             )
