@@ -9,7 +9,14 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      child: Scaffold(
+      appBar: AppBar(title: Text('Home'),),
+        body: Container(
+        child: Text( ' Home page '),
+      ),
+    ),
+    );
   }
 }
 

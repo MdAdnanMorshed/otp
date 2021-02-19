@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:otp/homePage.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 class SigninPhoneNumberVerificationPage extends StatefulWidget {
   final String verificationType;
@@ -102,7 +103,7 @@ class _SigninPhoneNumberVerificationPageState extends State<SigninPhoneNumberVer
                     onPressed: () {
                       if(!_buttonDisabled){
                         print(_verificationCode);
-                     //   Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => BottomNavigationBarPage()), (Route<dynamic> route) => false);
+                       Navigator.of(context).pushAndRemoveUntil(MaterialPageRoute(builder: (context) => HomePage()), (Route<dynamic> route) => false);
                         FocusScope.of(context).unfocus();
                       }
                     },
